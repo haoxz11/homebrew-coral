@@ -1,0 +1,25 @@
+# Formula/coral.rb
+class Coral < Formula
+  desc "静态文档服务器"
+  homepage "https://github.com/你的用户名/myrust"
+  version "0.3.0"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/你的用户名/myrust/releases/download/v0.3.0/coral-aarch64-apple-darwin.tar.gz"
+      sha256 "arm64的sha256"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/你的用户名/myrust/releases/download/v0.3.0/coral-x86_64-apple-darwin.tar.gz"
+      sha256 "intel的sha256"
+    end
+  end
+
+  def install
+    bin.install "coral"
+  end
+
+  test do
+    assert_match version.to_s, shell_output("#{bin}/coral -v")
+  end
+end
