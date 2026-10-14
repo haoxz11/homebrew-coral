@@ -1,17 +1,17 @@
 class CoralCli < Formula
   desc "coral 入口：clap 参数、配置加载、tracing 初始化、生命周期与优雅停机"
   homepage "https://github.com/haoxz11/coral"
-  version "0.6.0"
+  version "0.6.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/haoxz11/coral/releases/download/v0.6.0/coral-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "c4fea62943cebbc19ce43df5a981a9baa5bb1a2338d97218aa1ce68c62abe527"
+      url "https://github.com/haoxz11/coral/releases/download/v0.6.1/coral-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "99b06abf849c355a00846ee29727968ec5e10e83c0b9034f1f632d68dc3fe58f"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/haoxz11/coral/releases/download/v0.6.0/coral-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "042aa38d3207e212ab5d51fc1d996dfcb0ed7c6636a9605832113d67c98ca637"
+      url "https://github.com/haoxz11/coral/releases/download/v0.6.1/coral-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8862dc642ef1522d6dfedb4d577165a012ee33e2fc67ccac6b609cca1b21f59e"
     end
   end
   license "MIT"
